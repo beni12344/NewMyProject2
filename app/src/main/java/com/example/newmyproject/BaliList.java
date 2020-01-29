@@ -39,16 +39,16 @@ public class BaliList extends AppCompatActivity {
         areaAdapter = new AreaAdapter(this,areaList);
         recyclerView.setAdapter(areaAdapter);
 
-//        recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
-//            @Override
-//            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
-//
-//                if(gridLayoutManager.findLastCompletelyVisibleItemPosition() == areaList.size()-1){
-//                    load_data_from_server(areaList.get(areaList.size()-1).getId());
-//                }
-//
-//            }
-//        });
+        recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+
+                if(gridLayoutManager.findLastCompletelyVisibleItemPosition() == areaList.size()-1){
+                    load_data_from_server(areaList.get(areaList.size()-1).getId());
+                }
+
+            }
+        });
     }
 
     private void load_data_from_server(final int id) {
