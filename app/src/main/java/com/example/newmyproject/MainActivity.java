@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
         areaList= new ArrayList<>();
         load_data_from_server(0);
 
-        gridLayoutManager = new GridLayoutManager(this,2);
+        gridLayoutManager = new GridLayoutManager(this,1);
         recyclerView.setLayoutManager(gridLayoutManager);
 
         areaAdapter = new AreaAdapter(this,areaList);
