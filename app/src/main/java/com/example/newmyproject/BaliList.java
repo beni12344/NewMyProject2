@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.widget.TextView;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -24,6 +25,7 @@ public class BaliList extends AppCompatActivity {
     private AreaAdapter areaAdapter;
     private List<Area> areaList;
     private GridLayoutManager gridLayoutManager;
+    private TextView txtName;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,6 +51,10 @@ public class BaliList extends AppCompatActivity {
 
             }
         });
+
+        Bundle extras = getIntent().getExtras();
+        String Value = extras.getSerializable("id").toString();
+
     }
 
     private void load_data_from_server(final int id) {

@@ -139,6 +139,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void goToBali() {
         Intent intent = new Intent(MainActivity.this, BaliList.class);
+        intent.putExtra("id","id");
+        intent.putExtra("name","name");
+        intent.putExtra("info","info");
+        intent.putExtra("image","image");
        startActivity(intent);
     }
 
