@@ -1,6 +1,7 @@
 package com.example.newmyproject;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,11 +35,21 @@ private List<Area> areaList;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull AreaAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull AreaAdapter.ViewHolder holder, final int position) {
 
         Glide.with(mCtx).load(areaList.get(position).getImage()).into(holder.imageView);
         holder.name.setText(areaList.get(position).getName());
 //        holder.info.setText(areaList.get(position).getInfo());
+        holder.name.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent(mCtx,RegencyDetailPage.class);
+                intent.putExtra("name",areaList.get(position).getName());
+                intent.putExtra("info",areaList.get(position).getInfo());
+                intent.putExtra("image",areaList.get(position).getImage());
+                mCtx.startActivity(intent);
+            }
+        });
     }
 
     @Override
