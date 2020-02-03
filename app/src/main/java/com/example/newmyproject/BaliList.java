@@ -64,7 +64,7 @@ public class BaliList extends AppCompatActivity {
 
                 OkHttpClient client = new OkHttpClient();
                 Request request = new Request.Builder()
-                        .url("192.168.1.111/MobileAppTes3/bali.php?id=" + id)
+                        .url("http://192.168.1.111/MobileAppTes3/bali.php?id=" + id)
                         .build();
                 try {
                     Response response = client.newCall(request).execute();
