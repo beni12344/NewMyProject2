@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
 
                 OkHttpClient client = new OkHttpClient();
                 Request request = new Request.Builder()
-                        .url("http://192.168.1.123/MobileAppTes3/area.php?id=" + id)
+                        .url("http://192.168.1.111/MobileAppTes3/area.php?id=" + id)
                         .build();
                 try {
                     Response response = client.newCall(request).execute();
