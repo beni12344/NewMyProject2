@@ -32,7 +32,7 @@ public class RegencyDetailPage extends AppCompatActivity {
 
             setName(extraName);
             setInfo(extraInfo);
-            setImage(extraImage);
+//            setImage(extraImage);
 
 
         }
@@ -44,10 +44,10 @@ public class RegencyDetailPage extends AppCompatActivity {
         TextView name = findViewById(R.id.txtDetailName);
         name.setText(extraName);
     }
-    private void setImage(String extraImage) {
-        ImageView imageView = findViewById(R.id.imageViewDetail);
-        Glide.with(this).asBit
-    }
+//    private void setImage(String extraImage) {
+//        ImageView imageView = findViewById(R.id.imageViewDetail);
+//        Glide.with(this).asBit
+//    }
 
 
     private void setInfo(String extraInfo) {
