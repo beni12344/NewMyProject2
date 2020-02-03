@@ -1,7 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".JatimList"/>
+    android:orientation="vertical"
+    tools:context=".JatimList">
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="match_parent"
+        android:layout_height="159dp"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/jawatimur" />
+
+    <TextView
+        android:id="@+id/txtName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Jawa Timur"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+    <TextView
+        android:id="@+id/txtInfo"
+        android:layout_width="match_parent"
+        android:layout_height="143dp"
+        android:text="East Java, the rugged Indonesian province, includes the eastern part of Java plus Madura and some smaller islands. It’s known for its volcanoes, including active Mt. Bromo, part of the vast Tengger Massif that falls within Bromo Tengger Semeru National Park. Rising from the vast Sea of Sand plain, Bromo affords dramatic crater views and stellar viewpoints over the surrounding countryside." />
+
+    <TextView
+        android:id="@+id/txtRegencies"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Regencies"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/jatim_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="423dp" />
+</LinearLayout>
